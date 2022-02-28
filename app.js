@@ -1,22 +1,13 @@
-const api = require("./DataAccess/linx");
+const api = require("./data-access/linx");
+const mysqlDB = require("./data-access/alison");
+const legislativeDayRef = require("./movers/legislativeDayRef");
 
-async function test(){
-    const key = await api.getKey();
-    const query = `{
-        matters {
-            legislativeDays {
-                nodes {
-                    id
-            session{id name}
-                    day
-                    legislativeBranch
-            startDate
-                    endDate
-                }
-            }
-        }
-    }`
-    api.getData(query, key);
+
+async function moveAllData(){
+
+    legislativeDayRef.moveLegislativeDayData();
+
 }
 
-test();
+
+moveAllData()
