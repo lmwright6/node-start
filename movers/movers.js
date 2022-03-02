@@ -12,8 +12,9 @@ class Mover {
     async getSourceData(key){
         this.sourceData = await api.getData(this.sourceMutation, key);
     }
-    
+
     async addDestinationData() {
+        console.log(this.cleanData)
         mysqlDB.pool.query(
             this.destinationInsert,
             [this.cleanData],

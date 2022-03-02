@@ -52,7 +52,7 @@ function getData(query, key){
               query: query
             }
           }).then((result) => {
-              resolve(result.data.data.matters.legislativeDays);
+              resolve(result.data.data);
           }).catch((error) => {
               console.log(error);
           });
