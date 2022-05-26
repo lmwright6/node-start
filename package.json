@@ -1,8 +1,6 @@
 {
   "dependencies": {
-    "axios": "^0.26.0",
     "dotenv": "^16.0.0",
-    "graphql-request": "^4.0.0",
-    "mysql": "^2.18.1"
+    "puppeteer": "^14.1.1"
   }
 }
